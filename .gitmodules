@@ -1,0 +1,3 @@
+[submodule "prepare_data/vcglib"]
+	path = prepare_data/vcglib
+	url = https://github.com/cnr-isti-vclab/vcglib.git

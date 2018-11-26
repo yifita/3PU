@@ -1,0 +1,12 @@
+*.so
+*.o
+*.h5
+*.pyc
+*.zip
+*.DS_Store
+*.hdf5
+*.bk
+*.xyz
+*.ply
+plots/*
+*.cmake

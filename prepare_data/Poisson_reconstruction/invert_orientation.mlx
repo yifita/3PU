@@ -1,0 +1,6 @@
+<!DOCTYPE FilterScript>
+<FilterScript>
+ <filter name="Invert Faces Orientation">
+  <Param type="RichBool" value="true" name="forceFlip"/>
+ </filter>
+</FilterScript>
