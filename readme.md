@@ -1,7 +1,24 @@
-# This is the official code for Patch-base progressive 3D Point Set Upsampling
+# Patch-base progressive 3D Point Set Upsampling
+## cite ##
+```
+```
+
+<center>
+
+virtual scan | 16x upsampled | real scan | 16x upsampled
+------------- | ------------- | ------------- | -------------
+<img src="figures/retheur03.png" height="300" />|<img src="figures/retheur02.png" height="300" /> | <img src="figures/06.png" width="240" />|<img src="figures/07.png" width="240" />
+
+Input | output | ground truth | Input reconstruction | output reconstruction | ground truth reconstruction| 
+------------- | ------------- | -------------  | -------------  | -------------  | ------------- 
+<img src="figures/5000_input00.png" width="200" /> | <img src="figures/5000_ours00.png" width="200" /> | <img src="figures/5000_gt00.png" width="200" /> | <img src="figures/5000_input01.png" width="200" /> | <img src="figures/5000_ours01.png" width="200" /> | <img src="figures/5000_gt01.png" width="200" /> 
+<img src="figures/625_input00.png" width="200" /> | <img src="figures/625_ours00.png" width="200" /> | <img src="figures/625_gt00.png" width="200" /> | <img src="figures/625_input01.png" width="200" /> | <img src="figures/625_ours01.png" width="200" /> | <img src="figures/625_gt01.png" width="200" />
+
+</center>
 
 ## Quick Demo ##
-```
+
+```bash
 # clone
 git clone https://github.com/yifita/P3U.git --recursive
 cd mpu
@@ -14,12 +31,14 @@ unzip -d data/test_data/ data/test_data/test_points.zip
 
 # conda environment
 conda env create -f environment.yml
+
 # automatically add cuda library path permanently to the current conda enviroment
 mkdir -p $HOME/anaconda3/envs/PPPU/etc/conda/activate.d
 cp activate_cuda_90.sh $HOME/anaconda3/envs/PPPU/etc/conda/activate.d
 mkdir -p $HOME/anaconda3/envs/PPPU/etc/conda/deactivate.d
 cp deactivate_cuda_90.sh $HOME/anaconda3/envs/PPPU/etc/conda/deactivate.d
 conda activate PPPU
+
 # install tensorflow
 pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.11.0-cp35-cp35m-linux_x86_64.whl
 
