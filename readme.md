@@ -15,11 +15,11 @@ unzip -d data/test_data/ data/test_data/test_points.zip
 # conda environment
 conda env create -f environment.yml
 # automatically add cuda library path permanently to the current conda enviroment
-mkdir -p $HOME/anaconda3/envs/MPPU/etc/conda/activate.d
-cp activate_cuda_90.sh $HOME/anaconda3/envs/MPPU/etc/conda/activate.d
-mkdir -p $HOME/anaconda3/envs/MPPU/etc/conda/deactivate.d
-cp deactivate_cuda_90.sh $HOME/anaconda3/envs/MPPU/etc/conda/deactivate.d
-conda activate MPPU
+mkdir -p $HOME/anaconda3/envs/PPPU/etc/conda/activate.d
+cp activate_cuda_90.sh $HOME/anaconda3/envs/PPPU/etc/conda/activate.d
+mkdir -p $HOME/anaconda3/envs/PPPU/etc/conda/deactivate.d
+cp deactivate_cuda_90.sh $HOME/anaconda3/envs/PPPU/etc/conda/deactivate.d
+conda activate PPPU
 # install tensorflow
 pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.11.0-cp35-cp35m-linux_x86_64.whl
 
@@ -64,8 +64,8 @@ cd polygonmesh_base
 We provide two models trained using each of the above mentioned data. Download them [here][pretrained], and unzip them under `model/`.
 
 ## tensorflow code compile ##
-0. Install cuda, cudnn and nccl if you haven't done so yet.
-1. Create conda environment `conda create --name PPU` with the prepared `enviroment.yml`.
+0. Install cuda 9.0, cudnn and nccl if you haven't done so yet.
+1. Create conda environment `conda env create -f environment.yml`.
 2. Install tensorflow, we use tensorflow 1.11 in this project, but tensorflow >= 1.5 should work.
 3. Compile the custom tensorflow code in `code/tf_ops` by running `./tf_*_compile.sh`.
 

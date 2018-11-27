@@ -1,4 +1,4 @@
-name: MPPU
+name: PPPU
 channels:
   - menpo
   - conda-forge
