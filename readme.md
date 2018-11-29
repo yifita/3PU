@@ -1,4 +1,5 @@
 # Patch-base progressive 3D Point Set Upsampling
+This is the official implementation for paper "[Patch-base progressive 3D Point Set Upsampling](https://arxiv.org/abs/1811.11286)".
 
 <center>
 
