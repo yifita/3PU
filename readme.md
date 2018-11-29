@@ -1,7 +1,4 @@
 # Patch-base progressive 3D Point Set Upsampling
-## cite ##
-```
-```
 
 <center>
 
@@ -133,6 +130,32 @@ python main_curriculum_interleave.py --phase train --id ppu_scan --model dense_i
 ```
 ### Create new training data ###
 You can create new training data by calling `python create_tfrecords.py` in `prepare_data` folder.
+
+---
+## cite ##
+If you find this code or data useful in your work, please cite our paper:
+```
+@ARTICLE{2018arXiv181111286Y,
+       author = {{Yifan}, Wang and {Wu}, Shihao and {Huang}, Hui and
+        {Cohen-Or}, Daniel and {Sorkine-Hornung}, Olga},
+        title = "{Patch-base progressive 3D Point Set Upsampling}",
+      journal = {ArXiv e-prints},
+     keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer
+        Science - Graphics, Computer Science - Machine Learning},
+         year = 2018,
+        month = Nov,
+          eid = {arXiv:1811.11286},
+        pages = {arXiv:1811.11286},
+archivePrefix = {arXiv},
+       eprint = {1811.11286},
+ primaryClass = {cs.CV},
+}
+
+```
+## Links to related projects ##
+PU-Net: [https://github.com/yulequan/PU-Net](https://github.com/yulequan/PU-Net)
+
+PointNet++: [https://github.com/charlesq34/pointnet2](https://github.com/charlesq34/pointnet2)
 
 [pretrained]: https://polybox.ethz.ch/index.php/s/TZjUeCWFPlmv0nj
 [train_mesh]: https://polybox.ethz.ch/index.php/s/sCC6pYAngLa9d8Y
