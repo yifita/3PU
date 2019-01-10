@@ -44,7 +44,7 @@ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorfl
 cd code/tf_ops
 cd CD && make -j
 cd ../grouping && ./tf_grouping_compile.sh
-cd ../sampling && ./tf_grouping_compile.sh
+cd ../sampling && ./tf_sampling_compile.sh
 
 # run code
 cd code
