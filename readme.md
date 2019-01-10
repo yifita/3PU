@@ -1,6 +1,10 @@
 # Patch-base progressive 3D Point Set Upsampling
 This is the official implementation for paper "[Patch-base progressive 3D Point Set Upsampling](https://arxiv.org/abs/1811.11286)".
 
+```diff
++ A new pytorch implemention using pytorch 1.0 is available at https://github.com/yifita/3PU_pytorch
+```
+
 <center>
 
 virtual scan | 16x upsampled | real scan | 16x upsampled
