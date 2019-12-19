@@ -7,7 +7,7 @@ output_dir=$2
 ext="$3"
 numSample="$4"
 myDir=$(pwd)
-binary=$(myDir)/PdSampling
+binary="$myDir/build/PdSampling"
 echo "input: $input_dir output: $output_dir extension: $ext"
 
 cd $input_dir
