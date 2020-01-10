@@ -10,3 +10,5 @@
 *.ply
 plots/*
 *.cmake
+*.pyc
+__pycache__
