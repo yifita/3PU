@@ -1,7 +1,7 @@
 nvcc = $(CUDA_ROOT)/bin/nvcc
 cudalib = $(CUDA_ROOT)/lib64/
-tensorflow = $(HOME)/anaconda3/envs/tf/lib/python3.5/site-packages/tensorflow/include
-tf_lib = $(HOME)/anaconda3/envs/tf/lib/python3.5/site-packages/tensorflow
+tensorflow = $(HOME)/anaconda3/envs/PPPU/lib/python3.5/site-packages/tensorflow/include
+tf_lib = $(HOME)/anaconda3/envs/PPPU/lib/python3.5/site-packages/tensorflow
 
 all: tf_nndistance_so.so
 .PHONY : all
