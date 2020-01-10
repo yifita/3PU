@@ -22,7 +22,7 @@ Input | output | ground truth | Input reconstruction | output reconstruction | g
 
 ```bash
 # clone
-git clone https://github.com/yifita/P3U.git --recursive
+git clone https://github.com/yifita/3PU.git --recursive
 cd mpu
 # download pretrained models
 curl -o model/pretrained.zip -O https://polybox.ethz.ch/index.php/s/TZjUeCWFPlmv0nj/download
