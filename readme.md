@@ -32,6 +32,7 @@ curl -o data/test_data/test_points.zip -O https://polybox.ethz.ch/index.php/s/wx
 unzip -d data/test_data/ data/test_data/test_points.zip
 
 # conda environment
+conda update -n base -c defaults conda
 conda env create -f environment.yml
 
 # automatically add cuda library path permanently to the current conda enviroment
@@ -41,12 +42,9 @@ mkdir -p $HOME/anaconda3/envs/PPPU/etc/conda/deactivate.d
 cp deactivate_cuda_90.sh $HOME/anaconda3/envs/PPPU/etc/conda/deactivate.d
 conda activate PPPU
 
-# install tensorflow
-pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.11.0-cp35-cp35m-linux_x86_64.whl
-
 # compile
 cd code/tf_ops
-cd CD && make -j
+cd CD && ./tf_nndistance_compile.sh
 cd ../grouping && ./tf_grouping_compile.sh
 cd ../sampling && ./tf_sampling_compile.sh
 
