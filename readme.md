@@ -2,6 +2,7 @@
 This is the official implementation for paper "[Patch-base progressive 3D Point Set Upsampling](https://arxiv.org/abs/1811.11286)".
 
 ```diff
++ I've removed the evaluation code, because the included NUC code proposed by PU_Net has issues, in our paper we didn't use this metric.
 + A new pytorch implemention using pytorch 1.0 is available at https://github.com/yifita/3PU_pytorch
 ```
 
