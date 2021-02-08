@@ -4,6 +4,7 @@ This is the official implementation for paper "[Patch-base progressive 3D Point 
 ```diff
 + I've removed the evaluation code, because the included NUC code proposed by PU_Net has issues, in our paper we didn't use this metric.
 + A new pytorch implemention using pytorch 1.0 is available at https://github.com/yifita/3PU_pytorch
++ Added MNIST contour data
 ```
 
 <center>
@@ -59,6 +60,11 @@ python main_curriculum_interleave.py --phase test --id sketchfab_poisson --model
 ## data preparation ##
 ### Sketchfab dataset ###
 Our 3D models are trained and tested using the [Sketchfab](https://sketchfab.com/) dataset created by ourselves. It consists of 90 training models and 13 testing models collected from [Sketchfab](https://sketchfab.com/). You can download the original meshes here: [training][train_mesh] and [testing][test_mesh].
+
+### MNIST contour data ###
+Per request, we provide the MNIST contour dataset used as toy examples for visualization and ablation studies in our paper. 
+[training](https://polybox.ethz.ch/index.php/s/fUgbJGTl3CRzq2m) contains 5 resolutions from 50 to 800 points. Each resolution contains 48,000 ply files.
+[testing](https://polybox.ethz.ch/index.php/s/11eJpISNO9v4gw7) contains 5 resolutions same as the training set, each containig 12,000 ply files.
 
 ### Input points ###
 We trained our models with two kinds of input points: point sets generated using poisson disc sampling and virtual scanner. 
