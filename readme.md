@@ -1,6 +1,10 @@
 # Patch-base progressive 3D Point Set Upsampling
 This is the official implementation for paper "[Patch-base progressive 3D Point Set Upsampling](https://arxiv.org/abs/1811.11286)".
 
+
+> [!IMPORTANT]  
+> Regrettably, the storage for the data and checkpoints have expired and couldn't be recovered. I'm very sorry for the inconvenience.
+ 
 ```diff
 + I've removed the evaluation code, because the included NUC code proposed by PU_Net has issues, in our paper we didn't use this metric.
 + A new pytorch implemention using pytorch 1.0 is available at https://github.com/yifita/3PU_pytorch
@@ -59,16 +63,16 @@ python main_curriculum_interleave.py --phase test --id sketchfab_poisson --model
 
 ## data preparation ##
 ### Sketchfab dataset ###
-Our 3D models are trained and tested using the [Sketchfab](https://sketchfab.com/) dataset created by ourselves. It consists of 90 training models and 13 testing models collected from [Sketchfab](https://sketchfab.com/). You can download the original meshes here: [training][train_mesh] and [testing][test_mesh].
+Our 3D models are trained and tested using the [Sketchfab](https://sketchfab.com/) dataset created by ourselves. It consists of 90 training models and 13 testing models collected from [Sketchfab](https://sketchfab.com/). ~~You can download the original meshes here: [training][train_mesh] and [testing][test_mesh].~~
 
 ### MNIST contour data ###
 Per request, we provide the MNIST contour dataset used as toy examples for visualization and ablation studies in our paper. 
-[training](https://polybox.ethz.ch/index.php/s/fUgbJGTl3CRzq2m) contains 5 resolutions from 50 to 800 points. Each resolution contains 48,000 ply files.
-[testing](https://polybox.ethz.ch/index.php/s/11eJpISNO9v4gw7) contains 5 resolutions same as the training set, each containig 12,000 ply files.
+~~[training](https://polybox.ethz.ch/index.php/s/fUgbJGTl3CRzq2m) contains 5 resolutions from 50 to 800 points. Each resolution contains 48,000 ply files.~~
+~~[testing](https://polybox.ethz.ch/index.php/s/11eJpISNO9v4gw7) contains 5 resolutions same as the training set, each containig 12,000 ply files.~~
 
 ### Input points ###
 We trained our models with two kinds of input points: point sets generated using poisson disc sampling and virtual scanner. 
-Download the [test][test_points] and [training data][train_record] used in our experiments. Unzip the test data to `data/test_data/` and unzip to training data to `record_data/`
+~~Download the [test][test_points] and [training data][train_record] used in our experiments. Unzip the test data to `data/test_data/` and unzip to training data to `record_data/`~~
 
 Additionally, you can create your own data with a virtual scanner or poisson disc sampling. 
 ```
@@ -87,7 +91,7 @@ cd polygonmesh_base
 ```
 
 ### Pretrained model ###
-We provide two models trained using each of the above mentioned data. Download them [here][pretrained], and unzip them under `model/`.
+We provide two models trained using each of the above mentioned data. ~~Download them [here][pretrained], and unzip them under `model/`.~~
 
 ## tensorflow code compile ##
 0. Install cuda 9.0, cudnn and nccl if you haven't done so yet.
@@ -158,9 +162,3 @@ year = {2019}
 PU-Net: [https://github.com/yulequan/PU-Net](https://github.com/yulequan/PU-Net)
 
 PointNet++: [https://github.com/charlesq34/pointnet2](https://github.com/charlesq34/pointnet2)
-
-[pretrained]: https://polybox.ethz.ch/index.php/s/TZjUeCWFPlmv0nj
-[train_mesh]: https://polybox.ethz.ch/index.php/s/sCC6pYAngLa9d8Y
-[test_mesh]: https://polybox.ethz.ch/index.php/s/wPxFlfxKbgVkfNb
-[test_points]: https://polybox.ethz.ch/index.php/s/wxKg4O05JnyePDK
-[train_record]: https://polybox.ethz.ch/index.php/s/Tt1gJxawq4rl34T
